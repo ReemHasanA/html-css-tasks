@@ -1,0 +1,132 @@
+*{
+    margin: 0%;
+    box-sizing: border-box;
+}
+nav{
+    
+    background-color: rgb(209, 246, 255);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+i{
+   font-size: 1.5rem;
+    padding: 5px;
+}
+img{
+    border-radius: 50%;
+    object-fit: cover;
+    max-width: 50px;
+    max-height: 50px;
+    padding: 5px;
+    margin-left: 5vw;
+}
+.user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+}
+h4{
+    color: aliceblue;
+    font-size: 1.5rem;
+    /* margin: auto; */
+}
+body{
+    background-color: lightcyan;
+}
+.dis{
+    /* width: 50%;
+    height: 50%; */
+    display: flex;
+    justify-content: space-between;
+    background-color: beige;
+    padding: 10px;
+    text-align: center;
+}
+.g{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height:fit-content;
+    width: 30%;
+    gap: 2px 2px;
+    border-radius: 2%;
+    
+    margin: 02%;
+}
+section,main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.bu{
+    border-radius: 5%;
+    color: white;
+    margin: 2%;
+    padding: 10px;
+    max-width: 350px;
+    min-width: 200px;
+    height: fit-content;
+}
+.b{
+    padding: 10px;
+    margin: auto;
+}
+.p{
+    width: 45vw;
+    margin:1vw;
+}
+.md{
+    width: 45vw;
+    height: fit-content;
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+
+}
+.f{
+    display: flex;
+    
+}
+.bd{
+    border-radius: 3%;
+    margin: 2%;
+    padding: 2%;
+}
+.c{
+    text-align: center;
+    background-color: beige;
+    font-size: smaller;
+}
+@media (max-width:1160px){
+    section{
+        justify-content: space-evenly;
+    }
+    .b{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    g{
+        width:50%;
+        margin: 1px;
+    }
+    .md{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,auto);
+
+    }
+}
+@media (max-width:550px) {
+    .g{width: 90%;}
+}
+@media (max-width:430px) {
+    .b{ flex-direction: column;}
+    .p , .md,.b{ width: 90%;
+    margin: auto;}
+}

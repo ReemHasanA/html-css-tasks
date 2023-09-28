@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    box-sizing: border-box;    
+}
+nav{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+}
+body{
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(144, 144, 144) 100%);
+    background-repeat:repeat-x;
+    background-size: cover;
+    height: 100vh;
+}
+header{
+    display: flex;
+    background-color: grey;
+    justify-content: center;
+    align-content: center;
+    height: 50px;
+}
+.card{
+    background-color: bisque;
+    height: 35px;
+    padding:5PX;
+    margin: 5px;
+    align-content: center;
+}
+main{
+    border: 2px solid grey;
+    margin: 20px auto;
+    width: 90%;
+    
+    
+}
+section{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.h{
+    display: flex;
+    margin: 30px auto 60px;justify-content: center;
+}
+#b{
+    background-color: grey;
+    text-align: center;
+    padding:  10px;
+    margin: 10px;
+}
+
+form,aside{
+    width: 50%;
+}
+input{
+    width: 90%;
+    margin: 5px auto;
+}
+img{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+   
+}
+.f{
+    display: flex;
+    margin: 10px;
+}
+
+@media (max-width:650px) {
+    section{
+        flex-direction: column-reverse;
+    }
+    aside,form{
+        width: 100%;
+    }
+}
+@media (max-width:475px){
+    header{
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    nav{
+        flex-direction: column-reverse;
+    }
+}

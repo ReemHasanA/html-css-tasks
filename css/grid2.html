@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: grid;
+            grid-template-columns: 70vw 30vw;
+            grid-template-rows: 10vh 60vh 20vh;
+            gap: 10px 10px;
+           
+        }
+        header{
+            background-color: black;
+            grid-column: 1/span2;
+            width: 100%;
+        }
+        main{
+            background-color: orangered;
+        }
+        aside{
+            background-color: green;
+        }
+        footer{
+            background-color: blue;
+            grid-column: 1/span2;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header></header>
+        <main></main>
+        <aside></aside>
+        <footer></footer>
+    </div>
+</body>
+</html>

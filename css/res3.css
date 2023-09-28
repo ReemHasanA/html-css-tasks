@@ -1,0 +1,120 @@
+*{
+    margin: 0%;
+    box-sizing: border-box;
+}
+nav{
+    
+    background-color: rgb(142, 142, 142);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 5%;
+}
+.f{
+    display: flex;
+}
+i{
+    margin: 5px;
+}
+aside{
+    
+    justify-content: center;
+    border: 2px solid green;
+    width: 20%;
+    margin: 3% 10px 5px 20px;
+
+}
+section{
+    background-image: url(veg/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size:cover;
+    padding: 10%;
+    height: 50vh;
+}
+p{
+    margin: 5px;
+}
+.card{
+    height: 200px;
+    width: 200px;
+    margin: 25px;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size:cover;
+    
+}
+h3{
+    background-color: white;
+    margin: 150px auto;
+    text-align: center;
+}
+main{
+    width: 70%;
+}
+footer{
+    justify-content: center;
+}
+.j{
+    margin: auto;
+}
+.m{
+    width: 90%;
+    margin: auto;
+}
+.d{
+    height: 50px;
+    padding: 15px;
+    font: bold ;
+}
+.s{
+    justify-content: space-between;
+    
+}
+.as{
+    width: 80%;
+    margin: 10px auto;
+    flex-wrap: wrap;
+}
+ul{
+    list-style-type: none;
+    
+}
+@media (max-width:750px) {
+    .s{
+        flex-wrap: wrap;
+    }
+    nav{
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+        justify-content: center;
+    }
+    .m{
+        flex-direction: column;
+    }
+    aside{
+        width: 90%;
+        margin: auto;
+        max-width: 400px;
+    }
+    main{
+        width: 100%;
+        margin: auto;
+    }
+    header{
+        width: 100%;
+        margin: auto;
+    }
+    #n{
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+@media (max-width:440px) {
+    .n{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

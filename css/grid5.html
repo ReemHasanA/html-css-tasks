@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(5,1fr);
+            background-color: rgb(105, 105, 252);
+            border-radius: 2%;
+            width: 40vw;
+            height: 70vh;
+            padding: 15px;
+            margin: auto;
+            gap: 10px;
+        }
+        header{
+            background-color: aliceblue;
+            grid-column: 1 /span 4 ;
+            
+        }
+        body{
+            /* display: flex;
+            justify-content: center; */
+            background-color: green;
+        }
+        .no{
+            background-color: beige;
+            padding: 5px;
+            font-size: 2em;
+            text-align: center;
+        }
+        .cal{
+            background-color: yellow;
+            padding: 5px;
+            font-size: 2em;
+            text-align: center;
+        }
+        .c{
+            background-color: red;
+            padding: 5px;
+            font-size: 2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header></header>
+        <button class="no">1</button>
+        <button class="no">2</button>
+        <button class="no">3</button>
+        <button class="cal">+</button>
+        <button class="no">4</button>
+        <button class="no">5</button>
+        <button class="no">6</button>
+        <button class="cal">-</button>
+        <button class="no">7</button>
+        <button class="no">8</button>
+        <button class="no">9</button>
+        <button class="cal">*</button>
+        <button class="c">c</button>
+        <button class="no">0</button>
+        <button class="no">=</button>
+        <button class="cal">/</button>
+    </main>
+</body>
+</html>

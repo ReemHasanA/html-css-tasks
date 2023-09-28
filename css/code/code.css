@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(41, 173, 166);
+    padding: 5px 20px;
+    justify-content: space-between;
+}
+.f{
+    display: flex;
+}
+ul{
+    list-style-type: none;
+    color: white;
+    vertical-align: top;
+    font-size: 15px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+li{
+    margin: 5px;
+}
+i{
+    font-size: 2rem;
+}
+section{
+    height:fit-content;
+    background-color: rgb(79, 8, 145);
+    padding: 2% 0% 0% 2%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+ul img{
+    height: 20px;
+}
+
+.p{
+    /* overflow-clip-margin: content-box; */
+    max-height: 300px;
+    max-width: 100%;
+    object-fit: cover;
+    /* position:absolute;
+    right:0;
+    top: 10vh; */
+}
+section div{
+    width: 40%;
+}
+h2{
+    font-size: 70px;
+    text-align: center;
+}
+.m1{
+    justify-content: space-evenly;
+}
+.card{
+    width: 200px;
+    border: none;
+}
+#n10{
+    justify-content: center; 
+    height: 30px;
+    line-height: 1px;
+       
+}
+#n102{
+    flex-wrap: wrap;
+}
+.card p{
+    text-align: center;
+}
+.learn{
+    background-image: url(back.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size:cover;
+    width: 100%;
+    color: white;
+    text-align: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+.learn p{
+    min-width: 250px;
+}
+.car{
+    height: 375px;
+   width: calc(95%/4);
+   border-radius: 20px;
+   margin: 1%;
+   color: white;
+   font-weight: bold;
+   text-align: center;
+}
+figure{
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size:cover;
+    height: 60%;
+    margin: 0;
+}
+figure div{
+    height: 40%;
+    position: relative;
+    bottom: -60%;
+}
+.b{
+    height: 40%;
+}
+#no1 div{
+    background-color:rgba(0, 238, 255, 0.596) ;
+}
+#no1 figure{
+    background-image: url(1.jpg);}
+#no2 div{
+    background-color:rgba(174, 0, 255, 0.527) ;
+    
+}
+#no2 figure{background-image: url(2.jpg); }
+#no3 div{
+    background-color:rgba(0, 238, 255, 0.596) ;
+
+}
+#no3 figure{
+    background-image: url(4.jpg);}
+#no4 div{
+    background-color:rgba(21, 255, 0, 0.562) ;
+}
+#no4 figure{
+    background-image: url(3.jpg);}
+.images img{
+    width: 49%;
+    margin: auto;
+}
+footer{
+    background-image: url(back.png);
+    /* background-repeat: no-repeat; */
+    background-position: right top;
+    background-size:cover;
+    width: 100%;
+    color: white;
+    height: 350px;
+    margin: 0%;
+    justify-content: center;
+    padding: 20px;
+}
+hr{
+    color: white;
+}
+.fh{
+    justify-content: space-between;
+    
+}
+footer ul{
+    font-size: large;
+    padding: 0;
+}
+@media (max-width:930px) {
+    section{
+        display: flex;
+        flex-wrap: wrap;
+        z-index: -2;
+        overflow-x: hidden;
+    }
+    section div{
+        width: 100%;
+        font-size: smaller;
+    }
+    .p{
+        z-index: 0;
+        
+    }
+    .h{
+        z-index: 1;
+        padding-right:5% ;
+    }
+    .lang{
+        display: flex;
+    }
+    .fh, .lang{
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .cm{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .car{
+        width: 48%;
+    }
+    nav ul{
+        font-size: smaller;
+        line-height: normal;
+        margin: 0;
+    }
+    ul{
+        justify-content: flex-start;
+    }
+    .m1{
+        flex-wrap: wrap;
+        }
+    .div-wrapper {
+        position: relative;
+        right: -30%;
+    }
+    section{
+        justify-content:end;
+    }
+    .images img{
+        width: 98%;
+        margin: auto;
+    }
+    .images{
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:670px) {
+    nav {
+        /* flex-wrap: wrap; */
+        font-size: smaller;
+        padding: 2px 5px;
+        max-height: 80px;
+    }
+    .div-wrapper {
+        left: 20%;
+    }
+    nav li{
+        margin-top: 0;
+    }
+    ul{
+        padding-left:  0;
+    }
+    button{
+        min-width: 75px;
+        padding: 2px;
+    }
+    .learn {
+    flex-wrap: wrap;
+    flex-direction: column;
+   }
+
+}
+@media (max-width:414px) {
+    nav ul, footer ul{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+    button{
+        font-size: 8px;
+        padding: 0px;
+        min-width: 50px;
+    }
+    i{
+        font-size: small;
+    }
+    .car{
+        width: 96%;
+        margin: auto;
+    }
+    .fh ul{
+        height: 30px;
+    }
+}
