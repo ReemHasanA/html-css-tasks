@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: aquamarine;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 450px;
+    max-height: fit-content;
+    max-width: 1000px;
+    margin: auto;
+}
+.card{
+    max-width: 200px;
+    width: 30%;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 5%;
+    margin:1%;
+}
+button{
+    width: 100px;
+    padding: 10px;
+    border-radius: 5%;
+    background-color: blue;
+    color: aliceblue;
+    text-align: center;
+    border: none;
+    margin: 10px;
+}
+.card img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+.card div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    background-color: aliceblue;
+}
+nav h3{
+    margin-right: 50px;
+}
+section{
+    margin: 50px auto 100px;
+    width: 90%;
+    max-width: 1000px;
+}
+section img {
+    width: 100px;
+    height: 100px;
+}
+.g{
+    height: 120px;
+    margin: auto;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+.g p{
+    background-color: aliceblue;
+    font-size: 1.5rem;
+}
+.g span{
+    background-color: black;
+    color: aliceblue;
+}

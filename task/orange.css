@@ -1,0 +1,21 @@
+form p{
+    font-weight: normal  !important;
+}
+span #errPass{
+    display: none;
+}
+@media (max-width:1000px) {
+    #carouselExampleAutoplaying{
+        display: none;
+    }
+    main{
+        width: 100% !important;
+    }
+}
+@media (max-width:750px) {
+    form{
+        width: 90% !important;
+        margin: 5% !important;
+        min-width: 250px;
+    }
+}

@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #7: Simple playlist </title>
+    <link rel="stylesheet" href="exercise7.css">
+    <script>
+        /* TODO this is for you to complete */
+       
+        function newSong(){
+            var newS = document.createElement("Li");
+                var song = document.getElementById("songTextInput").value ; 
+             newS.innerHTML=`<li>${song}</li><button id=delet onclick="remove1(this)">X</button>`
+            newS.style.display='flex';
+            newS.style.justifyContent = "space-between";
+    // var textnode=document.createTextNode(song);
+    // newS.appendChild(textnode);
+    // node.classname='newSong'
+    document.getElementById("playlist").appendChild(newS);
+}
+
+function remove1(e) {
+    e.parentElement.remove();
+   
+}
+// hide() {
+//             Element=document.getElementsByClassName(newSong);
+//             Element.
+            
+//         }
+//     document.addEventListener('click',function newSong(e) {
+//         if(e.target){
+//             Element.style= 'display:none';
+//         }
+//     })
+            // const node = document.createElement ('li');
+            // // Song = document.getElementById("songTextInput").textContent;
+            // //  document.getElementById("playlist").innerHTML = Song;
+            // const newS=  document.createTextNode(New('a'));
+            // node.appendChild(newS);
+            // //newS.className="listS";
+            // document.getElementById("playlist").appendChild(newS);
+        
+        
+
+//         function addRow() {
+//            song.innerHTML=document.getElementById('songTextInput').textContent
+//             document.body.appendChild('');
+//         }
+// function removeRow(input) {
+//   document.getElementById('songTextInput').removeChild(input.parentNode);
+// }
+    </script>
+</head>
+<body>
+<p>this is your playlist, when enter the song and hit add song a list should be created withe delete button as image below</p>
+
+<form>
+    <input type="text" id="songTextInput" size="40" placeholder="Song name">
+    <input type="button" id="addButton" value="Add Song" onclick="newSong()">
+</form>
+
+<ul id="playlist"></ul>
+
+
+</body>
+</html>
+

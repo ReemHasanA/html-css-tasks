@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basket</title>
+    <link rel="stylesheet" href="sellingPage.css">
+    <!-- <script src="sellingPage.js"></script> -->
+</head>
+<body>
+    <main>
+        <div class="card" id="item1">
+            <img src="images/iphone.jfif" alt="smartphone">
+            <div>
+                <div id="name1">Iphone</div>
+                <h5 id="price1" value='900'>900</h5>
+            </div>
+            <button type="submit" onclick="add1()">add to cart</button>
+        </div>
+        <div class="card" id="item2">
+            <img src="images/R.jfif" alt="headphone">
+            <div>
+                <p id="name2">headphone</p>
+                <h5 id="price2">150</h5>
+            </div>
+            <button type="button" onclick="add2()">add to cart</button>
+        </div>
+        <div class="card" id="item3">
+            <img src="images/keybdr.jfif" alt="keyboard">
+            <div>
+                <p id="name3">keyboard</p>
+                <h5 id="price3">60</h5>
+            </div>
+            <button type="button" onclick="add3()">add to cart</button>
+        </div>
+    </main>
+    <section>
+        <div class="g" id="item1G">
+            <img src="images/iphone.jfif" alt="smartphone">
+            <div>
+                <p><span id='minus' onclick="chang1()">-</span> <span id="count1"> 1 </span> <span id='plus' onclick="change1()">+</span></p>
+            </div>
+            <h5>900</h5>
+        </div>
+        <div class="g" id="item2G">
+            <img src="images/R.jfif" alt="headphone">
+            <div>
+                <p><span id='minus' onclick="chang2()">-</span> <span id="count2"> 1 </span> <span id='plus' onclick="change2()">+</span></p>
+            </div>
+            <h5>150</h5>
+        </div>
+        <div class="g" id="item3G">
+            <img src="images/keybdr.jfif" alt="keyboard">
+            <div>
+                <p><span id='minus' onclick="chang3()">-</span> <span id="count3"> 1 </span> <span id='plus' onclick="change3()">+</span></p>
+            </div>
+            <h5>60</h5>
+        </div>
+    </section>
+    <nav>
+                    <h3>Total</h3>
+            <h4 id="Total"></h4>
+        
+        <button type="submit" onclick= "addInput()" >save</button>
+    </nav>
+</body>
+<script>
+    let Price1= document.getElementById(`price1`).innerHTML;
+let Price2= document.getElementById(`price2`).innerHTML;
+let Price3= document.getElementById(`price3`).innerHTML;
+
+let productN1= document.getElementById('name1');
+let productN2= document.getElementById('name2');
+let productN3= document.getElementById('name3');
+let c = 0 , i = 0 , j = 0 , sum = 0;
+
+let basket= sessionStorage.getItem("testJSON");
+let savedBasket=JSON.parse(basket);
+    i=savedBasket[0].count;
+    j=savedBasket[1].count;
+    c=savedBasket[2].count;
+for (let index = 0; index < savedBasket.length; index++) {
+    if(savedBasket[index].count>0){
+        document.getElementById(`item${index+1}G`).style='display:flex';
+        document.getElementById(`count${index+1}`).innerHTML=savedBasket[index].count;
+        
+        total();
+    }
+    
+}
+
+function total() {
+    sum=Price1*i+Price2*j+Price3*c;
+    document.getElementById('Total').innerHTML=sum;
+}
+
+function add1() {
+    document.getElementById(`item1G`).style='display:flex';
+    i=1;
+    total();
+} 
+function add2() {
+    document.getElementById(`item2G`).style='display:flex';
+    j=1;
+    total();
+} 
+function add3() {
+    document.getElementById(`item3G`).style='display:flex';
+    c=1;
+    total();
+} 
+function change1() {
+    ++i;
+    document.getElementById('count1').innerHTML=i;
+    total();
+}
+function change2() {
+    ++j;
+    document.getElementById('count2').innerHTML=j;
+    total();
+}
+function change3() {
+    ++c;
+    document.getElementById('count3').innerHTML=c;
+    total();
+}
+
+function chang1() {
+    i--
+    total()
+    document.getElementById('count1').innerHTML=i;
+    if (i<=0) {
+        document.getElementById(`item1G`).style='display:none';   
+    }
+}
+function chang2() {
+    j--
+    total()
+    document.getElementById('count2').innerHTML=j;
+    if (j<=0) {
+        document.getElementById(`item2G`).style='display:none';   
+    }
+}
+function chang3() {
+    c--
+    total()
+    document.getElementById('count3').innerHTML=c;
+    if (c<=0) {
+        document.getElementById(`item3G`).style='display:none';   
+    }
+}
+
+function addInput() {
+    let item=[
+        {'product':productN1.textContent , 'price':Price1, 'count': i},
+        {'product':productN2.textContent , 'price':Price2, 'count': j},
+        {'product':productN3.textContent , 'price':Price3, 'count': c},
+    ]
+    let newItem=JSON.stringify(item);
+    sessionStorage.setItem("testJSON", newItem);
+}
+</script>
+</html>

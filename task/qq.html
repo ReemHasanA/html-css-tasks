@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .container-All {
+            display: flex;
+        }
+        .img-container img {
+            height: 100vh;
+            width: 100%;
+        }
+        .img-container {
+            width: 40%;
+        }
+        header img {
+            width: 200px;
+        }
+        header {
+            border-bottom: 2px solid black;
+            width: 100%;
+        }
+        .container-div-one {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+        }
+        li {
+            padding-top: 20px;
+        }
+        li a{ 
+            text-decoration: none;
+            color: black;
+            font-weight: 900;
+            margin-left: 20px;
+        }
+        .container-two-text-and-login{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .inp {
+            margin-top: 20px;
+        }
+        .inp span {
+            color: rgb(255, 145, 0);
+        }
+        .inp p {
+            font-size: 12px;
+        }
+        .inp input{
+            width: 500px;
+            padding: 5px;
+        }
+        .container-wo {
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+            align-items:left;
+        }
+        .container-wo a{
+            text-decoration: none;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+            text-align: center;
+            font-weight: 900;
+            background-color:rgb(255, 145, 0);
+        }
+        .check {
+            margin-top: 10px;
+        }
+        .check span {
+            color: rgb(255, 145, 0);
+        }
+        input:checked  {
+        background-color: rgb(255, 145, 0);
+}
+    </style>
+</head>
+<body>
+    <div class="container-All">
+        <div class="img-container">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="container-div-one">
+            <header>
+                <nav>
+                    <img src="img/Screenshot 2023-10-08 111640.png" alt="OramgeLogo">
+                    <div class="container-header-text">
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <div class="container-two-text-and-login">
+                <div class="container-wo">
+                    <h1>Create an account</h1>
+                    <div class="inp">
+                        <h6>Email address <span>*</span></h6>
+                        <input type="email">
+                        <p>
+                            eg: username@domain.com
+                        </p>
+                    </div>
+                    <div class="inp">
+                        <h6>Mobile <span>*</span></h6>
+                        <input type="number">
+                        <p>eg: 077******</p>
+                    </div>
+                    <div class="inp">
+                        <h6>Paswword <span>*</span></h6>
+                        <input type="password">
+                        <p>The Password should be between 6-18 characters. </p>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="vehicle1" value="Bike">
+                        <label for="vehicle1"> I agree to the <span style="color: black; text-decoration: underline;">terns & conditions</span> Orange <span>*</span></label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="vehicle1" value="Bike">
+                        <label for="vehicle1"> Receive Coding Academy Newsletter.</label>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center" class="link">
+                        <a href="#">Sign Up</a>
+                        <a href="#">Already have an account?login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

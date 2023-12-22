@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #5: Input check for minimmum number of charecter should be 6 and password match in both input </title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        .err {
+            color: red;
+            font-size: 0.7em;
+        }
+    </style>
+    <script>
+        /* TODO complete this part */
+    </script>
+</head>
+<body>
+
+<form name="pw">
+    <table>
+        <tr>
+            <td>Password (min 6 characters):</td>
+            <td><input type="password" name="password1" id="password1" size="10" placeholder="Password" oninput="jj()"></td>
+            <td>
+                <div id="pw1_check" class="err"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Repeat password:</td>
+            <td><input type="password" name="password2" id="password2" size="10" placeholder="Password"></td>
+            <td>
+                <div id="pw2_check" class="err"></div>
+            </td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Submit" id="submitBtn" onclick="check()">
+</form>
+<script>
+  function jj(){
+    var firstInput = document.getElementById("password1").value;
+    if(firstInput.length<6){
+        document.getElementById("pw1_check").innerHTML = "NEED MORE CHAR";
+    }else{
+        document.getElementById("pw1_check").innerHTML = " ";
+        
+    }
+  }
+    
+    function check(event) {
+        var firstInput = document.getElementById("password1").value;
+        var secondInput = document.getElementById("password2").value;
+
+if (firstInput.length>=6) {
+    if (firstInput === secondInput) {
+        alert ('well done');
+    }else{
+        alert ("your repeat doesn't match");
+    }
+} else {
+    
+    }
+  }
+  document.getElementById("submitBtn").addEventListener("click", function(event){
+    var firstInput = document.getElementById("password1").value;
+        var secondInput = document.getElementById("password2").value;
+
+    if (firstInput.length<6 || firstInput !== secondInput) {
+        event.preventDefault()
+    }
+  
+});
+
+  
+ 
+</script>
+</body>
+</html>
+
